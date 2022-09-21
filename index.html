@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Down App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  </style>
+  <body class="flex items-center justify-center bg-gray-200 h-screen">
+    <div
+      class="container flex flex-col items-center justify-center w-80 gap-4 font-bold bg-white px-4 py-8 rounded-lg"
+    >
+      <h1>COUNT DOWN APP</h1>
+      <!-- App Label for hour minute and second -->
+      <div class="flex items-center justify-around w-full">
+        <p>HR</p>
+        <p>MIN</p>
+        <p>SEC</p>
+      </div>
+
+      <form class="w-full flex flex-col gap-4" onsubmit="runCounter(event)">
+        <!-- input boxes for hour minute and second -->
+        <div class="flex items-center justify-around w-full">
+          <input
+            class="text-center w-10 border border-black rounded"
+            type="number"
+            name=""
+            id="hour"
+            value="0"
+            max="24"
+            min="0"
+          />
+          <input
+            class="text-center w-10 border border-black rounded"
+            type="number"
+            name=""
+            id="minute"
+            value="0"
+            max="60"
+            min="0"
+          />
+          <input
+            class="text-center w-10 border border-black rounded"
+            type="number"
+            name=""
+            id="second"
+            value="0"
+            max="60"
+            min="0"
+          />
+        </div>
+
+        <!-- start and reset buttons -->
+        <div class="buttons flex items-center justify-around w-full">
+          <button id="startBtn" class="start border border-black rounded px-4" type="submit" >START</button>
+          <button id="resetBtn" class="reset border border-black rounded px-4" type="reset">RESET</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
